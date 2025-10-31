@@ -5,12 +5,19 @@ var coins_collected = 0
 signal coin_collected
 
 var elapsed_time: float = 0.0
-var timing_active: bool = true  
+var timing_active: bool = false 
 
 func _process(delta: float) -> void:
 	if timing_active:
 		elapsed_time += delta
 
+func start_timer():
+	elapsed_time = 0.0   
+	timing_active = true  
+
+func stop_timer():
+	timing_active = false 
+	
 func collect_coin():
 	coins_collected += 1
 	coin_collected.emit()
@@ -21,6 +28,3 @@ func collect_key():
 func use_key():
 	if keys > 0:
 		keys -= 1
-
-func stop_timer():
-	timing_active = false

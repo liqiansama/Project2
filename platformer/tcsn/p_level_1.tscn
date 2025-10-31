@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://bkm5n25ta3xdm"]
+[gd_scene load_steps=13 format=3 uid="uid://bkm5n25ta3xdm"]
 
 [ext_resource type="Texture2D" uid="uid://di8nk0sfonjxd" path="res://sprites/world_tileset.png" id="1_dh0gi"]
+[ext_resource type="Script" uid="uid://downuwtnnaaoe" path="res://platformer/scripts/p_level_1.gd" id="1_lmbcd"]
 [ext_resource type="PackedScene" uid="uid://b70722boa6teg" path="res://platformer/tcsn/platformer_player.tscn" id="2_yps6v"]
 [ext_resource type="PackedScene" uid="uid://chbywjyx5kttn" path="res://platformer/tcsn/coin.tscn" id="5_yps6v"]
 [ext_resource type="PackedScene" uid="uid://dt3qlalqvxe4b" path="res://platformer/tcsn/enemy.tscn" id="7_shcr8"]
@@ -190,6 +191,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_7k5xu")
 
 [node name="P-level-1" type="Node2D"]
+script = ExtResource("1_lmbcd")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_shcr8")
