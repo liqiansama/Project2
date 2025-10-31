@@ -11,7 +11,7 @@ func _physics_process(delta: float) -> void:
 	
 	var player_dir = get_tree().get_nodes_in_group("player")[0].position - self.position
 	
-	if player_dir.length() < 100:
+	if player_dir.length() < 150:
 		state = "chase"
 	else:
 		state = "idle"
